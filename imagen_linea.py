@@ -7,20 +7,18 @@ Created on Fri Oct 17 22:28:28 2025
 
 import matplotlib.pyplot as plt
 import numpy as np
+import random as r 
 
 img = np.zeros((256, 256))
 
-
-n_lineas= 20
-puntos_linea=10
-
     
-for i in range(n_lineas):
-    x= np.int32(np.linspace(0, 50, puntos_linea))
-    y= np.int32(np.linspace(0, 100, puntos_linea))
-    plt.plot(np.random.uniform(x, y, puntos_linea))
-   
+for i in range(20):
+    x1= r.randint(0, 100)
+    y1= r.randint(0, 100)
+    x2= r.randint(0, 100)
+    y2= r.randint(0, 100)
 
+    plt.plot([x1, y1], [x2, y2])
 
 plt.show()    
     
